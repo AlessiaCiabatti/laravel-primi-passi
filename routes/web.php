@@ -23,3 +23,7 @@ Route::get('/nome-cognome', function () {
     $lastname = 'De ughi';
     return view('about', compact('name', 'lastname'));
 })->name('about');
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
