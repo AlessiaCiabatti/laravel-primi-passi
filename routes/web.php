@@ -15,4 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
+
+
+Route::get('/nome-cognome', function () {
+    $name = 'Ugo';
+    $lastname = 'De ughi';
+    return view('about', compact('name', 'lastname'));
+})->name('about');
